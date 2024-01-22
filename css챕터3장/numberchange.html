@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>숫자를 조절해보자</title>
+    </head>
+    <body>
+        <h3>온도를 조절하자</h3>
+        <hr>
+        <form>
+            숫자<input type="number" min="0.0" max="10.0" step="1.0" value="1">
+            <br>
+            온도0&deg<input type="range" min="0" max="50" list="temp">50&deg;
+            <datalist id="temp">
+                <option value="0" label="low"></option>
+                <option value="25" label="medium"></option>
+                <option value="50" label="max"></option>
+                
+            </datalist>
+        </form>
+        <!--이 부분은 중요한 예시가 될거같으니 복습 및 적용에 유의 하자-->
+    </body>
+</html>
