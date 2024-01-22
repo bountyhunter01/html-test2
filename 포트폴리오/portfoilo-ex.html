@@ -1,0 +1,48 @@
+<div class="container">
+    <div class="overlay"></div>
+    <div class="card"></div>
+</div>
+<script>
+    var container = document.querySelector('.container');
+    var container = document.querySelector('.overlay');
+    container.addEventListener('mousemove', function (e) {
+        var x = e.offsetX;
+        var y = e.offsetY;
+        console.log(x, y);
+        var rotateX = 4 / 30 * y - 20; // 수정: rotateyX -> rotateX
+        var rotateY = -1 / 5 * x + 20; // 수정: rotatey -> rotateY
+        container.style = `transform : perspective(350px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`; // 수정: 백틱(``) 사용, rotateX와 rotateY를 한 줄에 작성
+        overlay.style = 'background-position : 20%'
+    });
+</script>
+
+<style>
+    .container {
+        width: 220px;
+        height: 310px;
+        transition: all 0.1s;
+
+    }
+
+    .overlay {
+        position: absolute;
+        width: 220px;
+        height: 310px;
+        background: linear-gradient(105deg,
+                transparent 40%,
+                rgba(255, 219, 112, 0.8) 45%,
+                rgba(132, 50, 255, 0.6) 50%,
+                transparent 54%);
+        filter: brightness(1.1) opacity(0.8);
+        mix-blend-mode: color-dodge;
+        background-size: 150% 150%;
+        background-position: 100%;
+    }
+
+    .card {
+        width: 220px;
+        height: 310px;
+        background-image: url(wayd.png);
+        background-size: cover;
+    }
+</style>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+         원 만들기
+        </title>
+        <style>
+            body,html{
+                margin: 0%;
+                padding: 0%;
+                
+            }
+            div{
+                position: absolute;
+                display:grid;
+                grid-template-columns: 1fr 1fr ;
+                justify-content: center;
+                align-items: center;
+                box-sizing: border-box;
+                margin:20%;
+              
+            }    
+                div{
+                animation: spin 1s infinite linear;
+                perspective: 100%;
+            }
+            @keyframes spin {
+                0%{
+                    transform: rotate(0deg);
+                }
+                100% {
+                    transform: rotate(360deg);
+                }
+            }
+            #color1{
+                
+                color: black;
+                border: 100px solid;
+                border-radius:0px 200px 0px 0px;
+                transform: rotate(270deg);
+               
+                
+            }
+            #color2{
+                
+                color: red;
+                border: 100px solid;
+                border-radius: 0px 200px 0px 0px;
+                transform: rotate(0deg);
+                
+            }
+            #color3{
+                color: blue;
+                border: 100px solid;
+                border-radius: 0px 200px 0px 0px;
+                transform: rotate(180deg);
+                
+            }
+            #color4{
+                color: green;
+                border: 100px solid;
+                border-radius: 0px 200px 0px 0px;
+                transform: rotate(90deg);
+                
+            }
+        </style>
+    </head>
+    <body>
+     <div>
+        <span id="color1"></span><span id="color2"></span>
+     
+        <span id="color3"></span><span id="color4"></span>
+    </div>
+    
+    </body>
+</html>
