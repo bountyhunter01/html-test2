@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        비트 논리 연산
+    </title>
+    <script>
+        function div8(v) {
+            var str = "";
+            for (i = 0; i < 8; i++, v <<= 1) {
+                if ((v & 0x80)) str += "1";
+                else str += "0";
+            }
+            return str;
+        }
+    </script>
+</head>
+
+<body>
+    <h3>비트 논리 연산</h3>
+    <hr>
+    <script>
+        var x = 10, y = 3;
+
+        document.write("<pre>");
+        document.write("x=" + x + ", y=" + y + "<br>");
+        document.write("x:" + div8(x) + "<br>");
+        document.write("y:" + div8(y) + "<br>");
+        document.write("<hr>");
+        document.write("x&y:          " + div8(x & y) + "<br>");
+        document.write("x|y:" + div8(x | y) + "<br>");
+        document.write("~x:           " + div8(~x) + "<br>");
+        document.write("<hr>");
+        document.write("x<<1:     " + div8(x << 1) + "<br>");
+        document.write("x>>1:     " + div8(x >> 1) + "<br>");
+        document.write("x>>>1:     " + div8(x >>> 1) + "");
+        document.write("</pre>");
+        /*값이 16이면 2로나눌때 몫이8이고 나머지가 0
+        몫이8이면 2로나눌때 몫이 4고 나머지가 0
+        몫이4일때 2로나눌때 몫이 2고 나머지가 0
+        몫이2일때 2로나눌때 몫이1이고 나머지가0
+        몫이1일때 2로나눌때 몫이0이ㅣ고 나머지가1인
+        몫이0이므로 2진수변환을 멈추고,나머지를 역순으로하면
+        10000이다*/
+    </script>
+</body>
+
+</html>

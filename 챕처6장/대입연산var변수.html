@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        대입연산
+    </title>
+</head>
+
+<body>
+    <h3>대입 연산</h3>
+    <hr>
+    <script>
+        var x = 3, y = 3, z = 3; //지역변수
+
+        document.write("x=" + x + ",y=" + y);
+        document.write(",z=" + z + "<br><br>");
+        document.write("x="+((x==z++))+"<br>");
+        //이부분은 내가 만든거지만 기억하자 대입한 후에 1을 더한 값
+
+        x += 3;
+        y *= 3;
+        z %= 2;
+
+        document.write("x+=3;실행 후,x=" + x + "<br>");
+    </script>
+</body>
+
+</html>
